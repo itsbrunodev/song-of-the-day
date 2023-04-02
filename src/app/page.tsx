@@ -1,91 +1,53 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+import Image from "next/image";
 
-const inter = Inter({ subsets: ['latin'] })
+/* import Button from "@/components/Button"; */
+import { Song } from "../..";
 
-export default function Home() {
+async function getSong() {
+  const res = await fetch("http://localhost:3000/api/song", {
+    cache: "no-cache",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json() as Promise<Song>;
+}
+
+export default async function App() {
+  const song = await getSong();
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="w-full h-full center">
+      <div className="flex md:flex-row flex-col items-center md:space-x-8 md:space-y-0 space-y-8">
+        <div className="relative md:w-[250px] sm:w-[225px] w-[200px] aspect-square">
+          <Image
+            className="absolute rounded-2xl h-full w-full blur-3xl animate__animated animate__fadeIn"
+            src={`https://i.scdn.co/image/${song.cover}`}
+            draggable={false}
+            unoptimized
+            fill
+            alt="img"
+            priority
+          />
+          <Image
+            className="rounded-2xl h-full w-full"
+            src={`https://i.scdn.co/image/${song.cover}`}
+            draggable={false}
+            alt={song.name}
+            unoptimized
+            fill
+            priority
+          />
+        </div>
+        <div className="flex-1 flex flex-col justify-center md:text-left text-center animate__animated animate__fadeInUp relative">
+          <div className="space-y-2">
+            <h1>{song.name}</h1>
+            <h2>{song.artist}</h2>
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </div>
+  );
 }
