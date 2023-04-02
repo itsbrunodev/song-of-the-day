@@ -4,9 +4,16 @@ import Image from "next/image";
 import { Song } from "../..";
 
 async function getSong() {
-  const res = await fetch("http://localhost:3000/api/song", {
-    cache: "no-cache",
-  });
+  const res = await fetch(
+    `${
+      process.env.NODE_ENV === "development"
+        ? "http://localhost:3000"
+        : "https://song-of-the-day.vercel.app"
+    }/api/song`,
+    {
+      cache: "no-cache",
+    }
+  );
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
