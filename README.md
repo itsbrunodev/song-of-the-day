@@ -10,7 +10,7 @@ Every day, a song is put on the website from a list that can be accessed via the
 
 #### [`GET /api/song`](https://song-of-the-day.vercel.app/api/song)
 
-Get today's song
+Get today's song of the day
 
 #### Example Response
 
@@ -41,7 +41,7 @@ Get tomorrow's song of the day
 
 Get every song that is on the list shuffled and the dates edited to be up-to-date
 
-> **Note** This doesn't actually change the list that is stored on the server.
+> **Note** This doesn't actually change the list that is stored on the server. This is useful when there are no more songs left on the list.
 
 ## Running locally
 
