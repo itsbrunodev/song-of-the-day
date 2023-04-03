@@ -27,7 +27,7 @@ export default function Song({ song }: { song?: ISong }) {
                   priority
                 />
                 <Image
-                  className="rounded-2xl h-full w-full"
+                  className="rounded-2xl h-full w-full animate__animated animate__fadeIn animate__slow"
                   src={`${scdn}/${song.cover}`}
                   draggable={false}
                   alt={song.name}
