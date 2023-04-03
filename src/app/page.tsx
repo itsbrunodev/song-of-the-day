@@ -14,11 +14,11 @@ async function getSong() {
       cache: "no-cache",
     }
   ).catch(() => {
-    throw new Error();
+    throw new Error("Failed to fetch data");
   });
 
   if (!res.ok) {
-    throw new Error();
+    throw new Error("Failed to fetch data");
   }
 
   return res.json() as Promise<ISong>;
