@@ -6,6 +6,7 @@ export default function Repo() {
       className="absolute top-2 right-2 z-10 hover:opacity-50"
       href="https://github.com/brunolepis/song-of-the-day"
       target="_blank"
+      aria-label="Visit GitHub repository"
     >
       <svg
         className="w-8 fill-white"
