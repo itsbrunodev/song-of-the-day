@@ -36,4 +36,8 @@ a {
   .center {
     @apply flex justify-center items-center;
   }
+
+  .blur-image {
+    --animate-delay: 0.2s;
+  }
 }

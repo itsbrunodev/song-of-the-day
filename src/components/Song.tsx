@@ -18,7 +18,7 @@ export default function Song({ song }: { song?: ISong }) {
             {song?.cover && song.name ? (
               <>
                 <Image
-                  className="absolute rounded-2xl h-full w-full blur-3xl animate__animated animate__fadeIn"
+                  className="absolute rounded-2xl h-full w-full blur-3xl animate__animated animate__fadeIn blur-image animate__delay-1s"
                   src={`${scdn}/${song.cover}`}
                   draggable={false}
                   unoptimized
