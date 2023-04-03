@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { FastAverageColor } from "fast-average-color";
 
 import Song, { scdn } from "@/components/Song";
 import { Song as ISong } from "../..";
@@ -51,7 +52,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title,
     description,
-    themeColor: "black",
+    themeColor: "#fff",
     icons: {
       icon: url,
     },
