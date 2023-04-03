@@ -1,11 +1,13 @@
 import { Poppins } from "next/font/google";
+import { Metadata } from "next";
 
 import "animate.css";
 import "./globals.css";
+import Repo from "@/components/Repo";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Song of the Day",
-  description: "Song of the Day",
+  description: "Daily unique song generator website",
 };
 
 const poppins = Poppins({
@@ -20,7 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-black w-screen h-screen ${poppins.className}`}>
+      <body
+        className={`bg-black w-screen h-screen relative ${poppins.className}`}
+      >
+        <Repo />
         {children}
       </body>
     </html>

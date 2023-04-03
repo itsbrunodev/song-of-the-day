@@ -6,7 +6,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  transition: all 0.1s ease-out;
+  transition: all 0.15s ease-out;
 }
 
 html,
@@ -25,10 +25,12 @@ a {
 @layer base {
   h1 {
     @apply font-semibold md:text-4xl sm:text-3xl text-2xl;
+    --animate-delay: 0.2s;
   }
 
   h2 {
     @apply text-zinc-200 md:text-2xl sm:text-xl text-lg;
+    --animate-delay: 0.4s;
   }
 
   .center {
