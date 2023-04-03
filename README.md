@@ -33,6 +33,8 @@ Get today's song
 
 Get every song that is on the list shuffled and the dates edited to be up-to-date
 
+> **Note** This doesn't actually change the list that is stored on the server.
+
 ## Running locally
 
 1. Clone the repository.
