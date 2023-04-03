@@ -45,10 +45,10 @@ async function getSong() {
 export async function generateMetadata(): Promise<Metadata> {
   const song = await getSong();
   const url = `${scdn}/${song.cover}`;
-  const title = `${song.artist} - ${song.name}`;
+  const title = `${song.name} - ${song.artist}`;
 
   return {
-    title: `${song.artist} - ${song.name}`,
+    title,
     themeColor: "black",
     icons: {
       icon: url,
