@@ -5,11 +5,6 @@ import "animate.css";
 import "./globals.css";
 import Repo from "@/components/Repo";
 
-export const metadata: Metadata = {
-  title: "Song of the Day",
-  description: "Daily unique song generator website",
-};
-
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],

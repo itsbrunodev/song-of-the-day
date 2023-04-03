@@ -27,7 +27,7 @@ async function getSong() {
      *
      * this is only here because next.js at build time freaks out if the fetch
      * throws an error
-     * 
+     *
      * note: this should be temporary but it works so there isn't really a need
      * to change this
      */
@@ -46,15 +46,18 @@ export async function generateMetadata(): Promise<Metadata> {
   const song = await getSong();
   const url = `${scdn}/${song.cover}`;
   const title = `${song.name} - ${song.artist}`;
+  const description = "Daily unique song generator website";
 
   return {
     title,
+    description,
     themeColor: "black",
     icons: {
       icon: url,
     },
     openGraph: {
       title,
+      description,
       images: [
         {
           url: url,
@@ -67,6 +70,7 @@ export async function generateMetadata(): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       title,
+      description,
       images: [url],
     },
   } as Metadata;
