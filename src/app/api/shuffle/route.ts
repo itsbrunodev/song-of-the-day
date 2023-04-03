@@ -1,20 +1,7 @@
 import { NextResponse } from "next/server";
 
 import songs from "@/songs";
-
-const dayMs = 1000 * 60 * 60 * 24;
-
-function dateDiffDays(a: Date, b: Date) {
-  return Math.ceil((a.getTime() - b.getTime()) / dayMs);
-}
-
-function shuffle(arr: any[]) {
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-}
+import { dateDiffDays, shuffle } from "@/functions";
 
 export async function GET() {
   const now = new Date();

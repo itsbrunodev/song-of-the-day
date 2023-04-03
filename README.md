@@ -8,10 +8,6 @@ Every day, a song is put on the website from a list that can be accessed via the
 
 ## Rest API
 
-#### [`GET /api/songs`](https://song-of-the-day.vercel.app/api/songs)
-
-Get every song that is on the list
-
 #### [`GET /api/song`](https://song-of-the-day.vercel.app/api/song)
 
 Get today's song
@@ -28,6 +24,18 @@ Get today's song
   date: "1970-01-01", // The date when the song is the song of the day (YYYY-MM-DD)
 }
 ```
+
+#### [`GET /api/songs`](https://song-of-the-day.vercel.app/api/songs)
+
+Get every song that is on the list
+
+#### [`GET /api/previous`](https://song-of-the-day.vercel.app/api/previous)
+
+Get yesterday's song of the day
+
+#### [`GET /api/next`](https://song-of-the-day.vercel.app/api/next)
+
+Get tomorrow's song of the day
 
 #### [`GET /api/shuffle`](https://song-of-the-day.vercel.app/api/shuffle)
 

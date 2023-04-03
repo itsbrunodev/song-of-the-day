@@ -4,12 +4,12 @@ import songs from "@/songs";
 import { isToday } from "@/functions";
 
 export async function GET() {
-  const song = songs.find((x) => isToday(new Date(x.date)));
+  const songIndex = songs.findIndex((x) => isToday(new Date(x.date)));
 
-  if (!song)
+  if (songIndex > songs.length - 1)
     return NextResponse.json(null, {
       status: 500,
     });
 
-  return NextResponse.json(song);
+  return NextResponse.json(songs[songIndex + 1]);
 }
