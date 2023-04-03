@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import { FastAverageColor } from "fast-average-color";
 
 import Song, { scdn } from "@/components/Song";
 import { Song as ISong } from "../..";
