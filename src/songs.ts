@@ -57,6 +57,22 @@ const songs: Song[] = [
     videoId: "wTP8hoHJLBk",
     date: "2023-04-09",
   },
+  {
+    name: "Highway to Hell",
+    artist: "AC/DC",
+    cover: "ab67616d00001e0251c02a77d09dfcd53c8676d0",
+    trackId: "2zYzyRzz6pRmhPzyfMEC8s",
+    videoId: "l482T0yNkeo",
+    date: "2023-04-10",
+  },
+  {
+    name: "I Believe",
+    artist: "KAMRAD",
+    cover: "ab67616d00001e02ddf35831041c5d3678215dcf",
+    trackId: "2CewvqbfMOcnvYE3yayAJV",
+    videoId: "ZyZtmR02acA",
+    date: "2023-04-11",
+  },
 ];
 
 export default songs;
