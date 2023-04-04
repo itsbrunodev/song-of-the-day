@@ -73,6 +73,22 @@ const songs: Song[] = [
     videoId: "ZyZtmR02acA",
     date: "2023-04-11",
   },
+  {
+    name: "Losing It",
+    artist: "FISHER",
+    cover: "ab67616d00001e029367c1ee2eec0bf3a04b4868",
+    trackId: "6ho0GyrWZN3mhi9zVRW7xi",
+    videoId: "u31thuMehjM",
+    date: "2023-04-12",
+  },
+  {
+    name: "Stronger",
+    artist: "Kanye West",
+    cover: "ab67616d00001e02bcfdfd7c62c57a5a58a24b24",
+    trackId: "2VysjemU93ac5oRg4MfYGp",
+    videoId: "3mwiO5st-us",
+    date: "2023-04-13",
+  },
 ];
 
 export default songs;
