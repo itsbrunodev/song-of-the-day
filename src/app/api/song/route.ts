@@ -13,3 +13,5 @@ export async function GET() {
 
   return NextResponse.json(song);
 }
+
+export const dynamic = "force-dynamic";
