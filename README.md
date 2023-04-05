@@ -52,7 +52,7 @@ git clone https://github.com/brunolepis/song-of-the-day
 ```
 
 2. Go into the directory.
-3. Then install the dependencies.
+3. Then install the dependencies and start the development server.
 
 > **Note** This project uses [pnpm](https://pnpm.io) as the package manager. If you want to use [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) as the package manager, go to step 4.
 
@@ -61,7 +61,7 @@ pnpm install
 pnpm run dev
 ```
 
-4. Using npm, install the dependencies.
+4. Using npm, install the dependencies and start the development server.
 
 > **Note** It is recommended to delete the file called `pnpm-lock.yaml`.
 
