@@ -1,5 +1,4 @@
 import { Poppins } from "next/font/google";
-import { Metadata } from "next";
 
 import "animate.css";
 import "./globals.css";
