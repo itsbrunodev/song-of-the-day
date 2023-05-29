@@ -16,13 +16,13 @@ Get today's song of the day
 
 ```js
 {
-  name: "Macarena - Bayside Boys Remix",
-  artist: "Los Del Rio",
-  cover: "ab67616d00001e02a8c284ce171e96a79eabf7de", // The hash of the album cover image
-  trackId: "7obdw7ZGr6l1GqSBkFiY11", // The Spotify track ID
-  videoId: "zWaymcVmJ-A", // The YouTube video ID
+  name: "Never Gonna Give You Up",
+  artist: "Rick Astley",
+  cover: "ab67616d00001e02baf89eb11ec7c657805d2da0", // The hash of the album cover image
+  trackId: "4cOdK2wGLETKBW3PvgPWqT", // The Spotify track ID
+  videoId: "dQw4w9WgXcQ", // The YouTube video ID
   date: "1970-01-01", // The date when the song is the song of the day (YYYY-MM-DD)
-}
+},
 ```
 
 #### [`GET /api/songs`](https://song-of-the-day.vercel.app/api/songs)
@@ -58,7 +58,7 @@ git clone https://github.com/brunolepis/song-of-the-day
 
 ```
 pnpm install
-pnpm run dev
+pnpm dev
 ```
 
 4. Using npm, install the dependencies and start the development server.

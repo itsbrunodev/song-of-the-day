@@ -32,11 +32,11 @@ async function getSong() {
      * to change this
      */
     return {
-      name: "Macarena - Bayside Boys Remix",
-      artist: "Los Del Rio",
-      cover: "ab67616d00001e02a8c284ce171e96a79eabf7de",
-      trackId: "7obdw7ZGr6l1GqSBkFiY11",
-      videoId: "zWaymcVmJ-A",
+      name: "Never Gonna Give You Up",
+      artist: "Rick Astley",
+      cover: "ab67616d00001e02baf89eb11ec7c657805d2da0",
+      trackId: "4cOdK2wGLETKBW3PvgPWqT",
+      videoId: "dQw4w9WgXcQ",
       date: new Date().toISOString().slice(0, 10),
     } as ISong;
   }
